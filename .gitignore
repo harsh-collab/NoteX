@@ -1,0 +1,5 @@
+venv/
+notex-frontend/node_modules/
+__pycache__/
+dist/
+.env
