@@ -71,7 +71,7 @@ ${newLatexBody}
   const exportPDF = async () => {
     try {
       toast.info("Generating PDF...", "Please Wait");
-      const res = await fetch("http://localhost:5000/export/pdf", {
+      const res = await fetch("https://notex-backend-1-f4ld.onrender.com/export/pdf", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ latex }),

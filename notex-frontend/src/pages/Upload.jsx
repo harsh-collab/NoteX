@@ -84,7 +84,7 @@ export default function Upload() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.post("http://localhost:5000/convert/batch", fd, {
+      const res = await axios.post("https://notex-backend-1-f4ld.onrender.com/convert/batch", fd, {
         headers: {
           ...(token ? { Authorization: `Bearer ${token}` } : {}),
         },
@@ -308,7 +308,7 @@ export default function Upload() {
                           Original Image
                         </h4>
                         <img
-                          src={`http://localhost:5000/uploads/${result.image_filename}`}
+                          src={`https://notex-backend-1-f4ld.onrender.com/uploads/${result.image_filename}`}
                           alt={result.filename}
                           style={{
                             width: "100%",

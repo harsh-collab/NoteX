@@ -13,7 +13,7 @@ export default function History() {
     const load = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get("http://localhost:5000/history", {
+        const res = await axios.get("https://notex-backend-1-f4ld.onrender.com", {
           headers: { Authorization: `Bearer ${token}` }
         });
         setItems(res.data.history || []);
@@ -84,7 +84,7 @@ export default function History() {
                   onMouseLeave={(e) => e.currentTarget.style.borderColor = "rgba(99, 102, 241, 0.3)"}
                 >
                   <img
-                    src={`http://localhost:5000/uploads/${h.image_filename}`}
+                    src={`https://notex-backend-1-f4ld.onrender.com/uploads/${h.image_filename}`}
                     alt={h.title}
                     style={{
                       width: "100%",
@@ -224,7 +224,7 @@ export default function History() {
                   border: "1px solid rgba(255,255,255,0.05)"
                 }}>
                   <img
-                    src={`http://localhost:5000/uploads/${selectedItem.image_filename}`}
+                    src={`https://notex-backend-1-f4ld.onrender.com/uploads/${selectedItem.image_filename}`}
                     alt={selectedItem.title}
                     style={{
                       width: "100%",
